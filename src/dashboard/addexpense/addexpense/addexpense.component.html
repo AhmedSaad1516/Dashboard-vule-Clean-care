@@ -1,0 +1,93 @@
+<div class="wrapper">
+    <div id="pre-loader"  *ngIf="img">
+      <img src="../../assets//loader-01.svg" alt="">
+  
+</div>
+                   
+      <div class="p-4" style="margin-top: 46px">
+        <header class="d-flex justify-content-between align-items-center" >
+            
+            <h1 class="m-0">Add New Expenses</h1> <hr>
+
+
+    
+        
+          </header>
+                            <form class="animate__animated  animate__fadeInDown" [formGroup]="expenseForm"   
+                            >
+                                <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <!-- <div  class="alert alert-danger" role="alert">
+                                               Data Is Not Falid
+                                              </div> -->
+                                            <mat-form-field appearance="outline" class="w-100">
+                                                <mat-label>Name</mat-label>
+                                                <input matInput formControlName="name" placeholder="Add Name"
+                            
+                                                 
+                                                >
+                                            
+                                          
+                                               
+                                            </mat-form-field>
+                                        </div>  
+                                        <div class="col-md-12">
+                                            <mat-form-field appearance="outline" class="w-100">
+                                                <mat-label>Money</mat-label>
+                                                <input matInput formControlName="money" placeholder="Add Money">
+                                            </mat-form-field>
+                                        </div> 
+                                           
+                                        <div class="col-md-12">
+                                            <label>Date<span>*</span>
+                                            </label>
+                                            <mat-form-field appearance="outline" class="w-100">
+                                              
+                                                <input  formControlName="date" class="form-control" matInput [matDatepicker]="picker" >
+                                                <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                <mat-datepicker  #picker></mat-datepicker>
+                                            </mat-form-field>
+                                        </div>  
+                                            
+                                        <div class="col-md-12">
+                                            <mat-form-field appearance="outline" class="w-100">
+                                                <label>Type<span>*</span>
+                                                </label>
+                                                <mat-select formControlName="type_id">
+                                                    <mat-option *ngFor="let Worker of showType" [value]="Worker?.id">
+                                                      {{Worker.name}}
+                                                    </mat-option>
+                                                  </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <mat-form-field appearance="outline" class="w-100">
+                                                <mat-label>Notes</mat-label>
+                                                <input matInput formControlName="notes" placeholder="Add Notes">
+                                            </mat-form-field>   
+                                        </div>
+                            
+                                      
+                               
+                            
+                                        
+                                      
+                                </div>
+                            </form>
+                    
+    <footer class="tw-p-6">
+        <div >
+            <button  mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="createexpenses()" >Create</button>
+           
+
+          
+
+ 
+          </div>
+        
+      </footer>
+                        </div>
+                       
+                   
+
+

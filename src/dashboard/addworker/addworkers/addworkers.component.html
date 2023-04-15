@@ -1,0 +1,91 @@
+<div class="wrapper">
+<div id="pre-loader"  *ngIf="img">
+    <img src="../../assets//loader-01.svg" alt="">
+
+</div>
+</div>
+<div class="p-4" style="margin-top: 46px">
+    <header class="d-flex justify-content-between align-items-center" >
+        
+        <h1 *ngIf="!data" class="m-0">Add New Worker</h1> <hr>
+        <h1 *ngIf="data" class="m-0">Update Worker</h1> <hr>
+
+    
+      </header>
+    <form class="animate__animated  animate__fadeInDown" [formGroup]="formWorker" style="    
+    margin-top: 46px">
+        <div class="row mt-3">
+                <div class="col-md-12">
+                    <!-- <div  class="alert alert-danger" role="alert">
+                       Data Is Not Falid
+                      </div> -->
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email" placeholder="title"
+ 
+                         
+                        >
+                        <div *ngIf="formWorker.controls['email'].errors">
+                        </div>
+                  
+                       
+                    </mat-form-field>
+                </div>  
+                <div class="col-md-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" placeholder="title">
+                    </mat-form-field>
+                </div> 
+                   
+                <div class="col-md-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="address" placeholder="title">
+                    </mat-form-field>
+                </div>  
+                    
+                <div class="col-md-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Phone</mat-label>
+                        <input matInput formControlName="phone" placeholder="title">
+                    </mat-form-field>   
+                </div>
+                <div class="col-md-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Nin</mat-label>
+                        <input matInput formControlName="NIN" placeholder="title">
+                    </mat-form-field>   
+                </div>
+
+                <div class="col-md-12">
+                    
+                    <label for="selected" type="button" class="button gray small" > Select Photo</label>
+                    <div  role="alert" >
+                        <div>
+                         <p>{{url? photoName:formWorker.value.photo}}</p>                        
+                        </div>
+                        <img class="myu" [src]="url? url:formWorker.value.photo" alt="">
+                      </div>
+                    
+                    <input type="file" (change)="selectPhoto($event)" id="selected" hidden class="form-control">
+                   </div>
+       
+
+                
+              
+        </div>
+    </form>
+
+    <footer class="tw-p-6">
+        <div class="d-flex justify-content-center align-items-center">
+            <button *ngIf="!data" mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="createWorker()" >Create</button>
+            <button *ngIf="data" mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="updateWorker()" >Update</button>
+
+            <button mat-flat-button  class="btn btn-danger py-1 px-5" (click)="close()">Close</button>
+
+ 
+          </div>
+        
+      </footer>
+</div>

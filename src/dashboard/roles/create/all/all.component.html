@@ -1,0 +1,145 @@
+<div class="wrapper">
+    <div id="pre-loader"  *ngIf="img">
+      <img src="../../assets//loader-01.svg" alt="">
+  
+  </div>
+      <div class="container-fluid">
+          <div class="row">
+            <div class="content-wrapper">
+              <div class="page-title">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h2 class="mb-0" style="font-size: 1.571rem;
+                      font-weight: 800;"> </h2>
+                      
+                  </div>
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
+                      <li class="breadcrumb-item"><a routerLink="/home" class="default-color">{{'AllWorkers.Home' | translate}}</a></li>
+                      <li class="breadcrumb-item active"><a routerLink="/chat" class="default-color">{{'AllWorkers.Chat' | translate}}</a></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="row">  
+                
+                  <div class="col-xl-12 mb-30">     
+                    <div class="card card-statistics h-100"> 
+                      <div class="card-body">
+                       <div class="row">
+                        <div class="col-md-10">
+                            <div [formGroup]="roleForm" class="form-group">
+                                <div>
+                                <label for="exampleInputEmail1">Add Role</label>
+                                <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                               
+                              </div>
+                           <br>
+                            <div class="form-group__content">
+                                <ng-select [multiple]="true"formControlName="permission" >
+                                  <ng-option *ngFor="let car of permission" [value]="[car?.id]" > {{car?.name}}
+                                 
+                                  </ng-option>
+            
+                              </ng-select>
+                          
+                              </div>
+                                 
+                            </div>
+                              <div>
+                                              
+                       
+                        </div>
+                        <div class="col-md-2">
+                            <button style="margin-top: 36px;" 
+                            (click)="addRole()" 
+                            type="submit" class="btn btn-primary">Submit</button>
+
+                        </div>
+                       </div>
+                        
+                        </div>
+                      </div>
+                      
+                    </div>   
+                     <div >
+                   <!-- <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                         
+                            <div class="checkbox checbox-switch switch-success">
+                                <label>
+                                    <input type="checkbox" name="switch9">
+                                    <span></span>
+                                    Checkbox Label
+                                </label>
+                            </div>
+                       
+                    </div>
+                        <div class="col-md-2">
+                         
+                            <div class="checkbox checbox-switch switch-success">
+                                <label>
+                                    <input type="checkbox" name="switch9">
+                                    <span></span>
+                                    Checkbox Label
+                                </label>
+                            </div>
+                       
+                    </div>
+                     
+                    <div class="col-md-2">
+                         
+                        <div class="checkbox checbox-switch switch-success">
+                            <label>
+                                <input type="checkbox" name="switch9">
+                                <span></span>
+                                Checkbox Label
+                            </label>
+                        </div>
+                   
+                </div>
+                <div class="col-md-2">
+                         
+                    <div class="checkbox checbox-switch switch-success">
+                        <label>
+                            <input type="checkbox" name="switch9">
+                            <span></span>
+                            Checkbox Label
+                        </label>
+                    </div>
+               
+            </div>
+                        <div class="col-md-2">
+                         
+                            <div class="checkbox checbox-switch switch-success">
+                                <label>
+                                    <input type="checkbox" name="switch9">
+                                    <span></span>
+                                    Checkbox Label
+                                </label>
+                            </div>
+                       
+                    </div>
+                    <div class="col-md-2">
+                         
+                        <div class="checkbox checbox-switch switch-success">
+                            <label>
+                                <input type="checkbox" name="switch9">
+                                <span></span>
+                                Checkbox Label
+                            </label>
+                        </div>
+                   
+                </div>
+                       </div>
+                   </div> -->
+  
+                    
+                        </div>
+                  </div>
+              </div>
+          </div>
+         </div>
+      </div>
+  

@@ -1,0 +1,115 @@
+<div class="wrapper">
+    <div id="pre-loader"  *ngIf="img">
+        <img src="../../assets//loader-01.svg" alt="">
+    
+    </div>
+    </div>
+    <div class="p-4" style="margin-top: 46px">
+        <header class="d-flex justify-content-between align-items-center" >
+            
+            <h1 *ngIf="!data" class="m-0">Add New Service</h1> <hr>
+            <h1 *ngIf="data" class="m-0">Update Data Service</h1> <hr>
+
+          </header>
+        <form class="animate__animated  animate__fadeInDown" [formGroup]="formWorker" style="    
+        margin-top: 46px">
+            <div class="row mt-3">
+                    <div class="col-md-12">
+                        <!-- <div  class="alert alert-danger" role="alert">
+                           Data Is Not Falid
+                          </div> -->
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>title_en</mat-label>
+                            <input matInput formControlName="title_en" placeholder="title">
+                        </mat-form-field>
+                    </div>  
+                    <div class="col-md-12">
+                        <!-- <div  class="alert alert-danger" role="alert">
+                           Data Is Not Falid
+                          </div> -->
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>title_swd</mat-label>
+                            <input matInput formControlName="title_sv" placeholder="title">
+                        </mat-form-field>
+                    </div>  
+                    <div class="col-md-12">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>description_en</mat-label>
+                            <input matInput formControlName="description_en" placeholder="title">
+                        </mat-form-field>
+                    </div> 
+                       
+                    <div class="col-md-12">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>description_swd</mat-label>
+                            <input matInput formControlName="description_sv" placeholder="title">
+                        </mat-form-field>
+                    </div> 
+                       
+                    <div class="col-md-12">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>price</mat-label>
+                            <input matInput formControlName="price" placeholder="title">
+                        </mat-form-field>
+                    </div>  
+                        
+                    <div class="col-md-12">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>category_id</mat-label>
+                            <input matInput formControlName="category_id" placeholder="title">
+                        </mat-form-field>   
+                    </div>
+                 
+                    <div class="col-md-12">
+
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Worker</mat-label>
+                            <mat-select formControlName="worker_id">
+                                <mat-option *ngFor="let Worker of workers" [value]="Worker?.id">
+                                  {{Worker?.name}}
+                                </mat-option>
+                              </mat-select>
+                        </mat-form-field>
+                   
+
+
+                        
+                          
+
+                     
+                    </div>
+    
+                
+    
+    
+                    <div class="col-md-12">
+                        
+                        <label for="selected" type="button" class="button gray small" > Select Photo</label>
+                        <div  role="alert">
+                            <div>
+                                <p>{{url? photoName:formWorker.value.gallery}}</p>                        
+                            </div>
+                            <img class="myu" [src]="url? url:formWorker.value.gallery" alt="">
+                        </div>
+                        
+                        <input type="file" (change)="selectPhoto($event)" id="selected" hidden class="form-control">
+                       </div>
+           
+    
+                    
+                  
+            </div>
+        </form>
+    
+        <footer class="tw-p-6">
+            <div class="d-flex justify-content-center align-items-center">
+                <button *ngIf="!data" mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="createWorker()" >Create</button>
+                <button *ngIf="data" mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="update()" >Update</button>
+
+                <button mat-flat-button  class="btn btn-danger py-1 px-5" (click)="close()">Close</button>
+    
+     
+              </div>
+            
+          </footer>
+    </div>

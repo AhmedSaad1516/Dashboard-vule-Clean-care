@@ -1,0 +1,104 @@
+<div class="wrapper">
+  <div id="pre-loader"  *ngIf="img">
+    <img src="../../assets//loader-01.svg" alt="">
+
+</div>
+    <div class="container-fluid">
+        <div class="row">
+     
+          <div class="content-wrapper">
+            <div class="page-title">
+              <div class="row">
+                <div class="col-sm-6" >
+                    <h2 class="mb-0" style="font-size: 1.571rem;
+                    font-weight: 800;"></h2>
+                </div>
+                <div class="col-sm-6">
+                  <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
+                    <li class="breadcrumb-item"><a routerLink="/home" class="default-color"></a></li>
+                    <li class="breadcrumb-item active"><a routerLink="/chat" class="default-color"></a></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="row">   
+                <div class="col-xl-12 mb-30">     
+                  <div class="card card-statistics h-100"> 
+                    <div class="card-body">
+                     <div class="d-block d-md-flex justify-content-between">
+                        <div class="d-block">
+                          <h5 class="card-title pb-0 border-0">Data Service</h5>
+                        </div>
+                        <div class="d-block d-md-flex clearfix sm-mt-20">
+                        
+                          
+                         </div>
+                         <div class="d-block d-md-flex clearfix sm-mt-20">
+                       
+                     
+                         </div>
+                       </div>
+                       <div class="table-responsive mt-15">
+                        <table class="table center-aligned-table mb-0">
+                          <thead>
+                            <tr class="text-dark"  style="text-align: center;">
+                              <th yle="text-align: inherit;" >Title_en</th >
+                                <th yle="text-align: inherit;" >Title_sv</th >
+                                  <th yle="text-align: inherit;" >Price</th >
+                                    <th yle="text-align: inherit;" >Created_at</th >
+                                      <th yle="text-align: inherit;" >updated_at</th >
+                                        
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr >
+                              
+                              <td style="text-align: center;"> {{title_en}}</td>
+                              <td style="text-align: center;"> {{title_sv}}</td>
+                              <td style="text-align: center;"> {{details.price}}</td>
+                              <td style="text-align: center;"> {{details.created_at}}</td>
+                              <td style="text-align: center;"> {{details.updated_at}}</td>
+                              
+                           
+                         
+                       
+                              <td>
+                                <button type="button" (click)="update(details)" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#exampleModal">
+                                  Update
+                                </button>                              
+                              </td>
+<!--                                    
+                              <div *ngIf="showFormDelete" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h2 class="modal-title" style="border-bottom: 2px outset red;">warning</h2>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="alert alert-danger" role="alert" style="text-align: center">
+                                        Are You Sure That You Want To Discard Your Changes ?
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary" (click)="close()" data-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-danger" data-dismiss="modal"(click)="delete(item.id)">Delete</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> -->
+                            </tr>
+     
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>   
+                </div>
+           
+            </div>
+        </div>
+       </div>
+    </div>

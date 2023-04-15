@@ -1,0 +1,55 @@
+<div class="wrapper">
+    <div id="pre-loader"  *ngIf="img">
+        <img src="../../assets//loader-01.svg" alt="">
+    
+    </div>
+    </div>
+
+  <div class="p-4" style="margin-top: 46px">
+    <header class="d-flex justify-content-between align-items-center" >
+        
+        <h3  class="m-0">Add New Announcement</h3> <hr>
+
+    
+      </header>
+                  
+                            <form class="animate__animated  animate__fadeInDown" [formGroup]="announcementForm" style="    
+                            margin-top: 46px">
+                                <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <!-- <div  class="alert alert-danger" role="alert">
+                                               Data Is Not Falid
+                                              </div> -->
+                                            <mat-form-field appearance="outline" class="w-100">
+                                                <mat-label>Title</mat-label>
+                                                <input matInput formControlName="title" placeholder="Title">
+                                            </mat-form-field>
+                                        </div>  
+                                        <div class="col-md-12">
+                                            
+                                            <label style="margin-top: 24px;"  for="selected" type="button" class="button gray small" > Select Photo</label>
+                                            <div  role="alert">
+                                                <div>
+                                                    <p>{{url? photoName:announcementForm.value.gallery}}</p>                        
+                                                </div>
+                                                <img class="myu" [src]="url? url:announcementForm.value.gallery" alt="">
+                                            </div>
+                                            
+                                            <input type="file" (change)="selectPhoto($event)" id="selected" hidden class="form-control">
+                                           </div>
+                                
+
+                                </div>
+                            </form>
+                        
+                            <footer class="tw-p-6">
+                                <div >
+                                    <button style="margin-top: 5px;"  mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="createannouncement()" >Create</button>
+                                    <button mat-flat-button  class="btn btn-danger py-1 px-5" (click)="close()">Close</button>
+  
+                                </div>
+                                
+                              </footer>
+                        </div>
+                
+

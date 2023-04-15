@@ -1,0 +1,91 @@
+<div class="wrapper">
+    <div id="pre-loader"  *ngIf="img">
+      <img src="../../assets//loader-01.svg" alt="">
+  
+  </div>
+      <div class="container-fluid">
+          <div class="row">
+     
+        
+            <div class="content-wrapper">
+              <div class="page-title">
+                <div class="row">
+                  <div class="col-sm-6" >
+                      <h2 class="mb-0" style="font-size: 1.571rem;
+                      font-weight: 800;"></h2>
+                  </div>
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
+                      <!-- <li class="breadcrumb-item"><a routerLink="/home" class="default-color">{{'AllServices.Home' | translate}}</a></li>
+                      <li class="breadcrumb-item active"><a routerLink="/chat" class="default-color">{{'AllServices.Chat' | translate}}</a></li> -->
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="row">   
+                  <div class="col-xl-12 mb-30">     
+                    <div class="card card-statistics h-100"> 
+                        <div class="card-body">
+                         <div class="d-block d-md-flex justify-content-between">
+                            <div class="d-block">
+                              <h5 class="card-title pb-0 border-0">Details </h5>
+                            </div>
+                            <div class="d-block d-md-flex clearfix sm-mt-20">
+                               <div class="clearfix">
+                                 <div class="box">
+                                  <select class="fancyselect sm-mb-20 mr-20" style="display: none;">
+                                    <option value="1">Some option</option>
+                                    <option value="2">Another option</option>
+                                    <option value="3">A option</option>
+                                    <option value="4">Potato</option>
+                                  </select><div class="nice-select fancyselect sm-mb-20 mr-20" tabindex="0"><span class="current">Some option</span><ul class="list"><li data-value="1" class="option selected">Some option</li><li data-value="2" class="option">Another option</li><li data-value="3" class="option">A option</li><li data-value="4" class="option">Potato</li></ul></div>
+                                </div>
+                              </div>
+                               <div class="widget-search ml-0 clearfix">
+                                
+                                <i class="fa fa-search"></i>
+                                <input type="search" class="form-control" placeholder="Search....">
+                              </div>
+                             </div>
+                           </div>
+                           <div class="table-responsive mt-15">
+                            <table class="table center-aligned-table mb-0">
+                              <thead>
+                                <tr class="text-dark">
+                                  <th  style="text-align: center;">Title_en</th>
+                                  <th  style="text-align: center;">Title_sv</th>
+                                  <th  style="text-align: center;">Description_en</th>
+                                  <th  style="text-align: center;">Description_sv</th>
+                                  <th  style="text-align: center;">Price </th>
+                                  <th  style="text-align: center;"> Active<th>
+                                    <th  > Active<th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center;">{{title}}</td>
+                                  <td style="text-align: center;"> {{title_sv}}</td>
+                                  <td style="text-align: center;">{{description_en}}</td>
+                                  <td style="text-align: center;">{{description_ev}}</td>
+                                  <td style="text-align: center;">{{details.price}}</td>
+                                  <td style="text-align: center;">{{details.active}}</td>
+                                  <td >
+                                    <button class="btn btn-outline-success btn-sm" (click)="openForm(details)">Update Details Service</button>
+                                
+                                </td>
+                                
+                                </tr>
+                                <tr>
+                               
+                                 
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+               
+              </div>
+          </div>
+         </div>
+      </div>

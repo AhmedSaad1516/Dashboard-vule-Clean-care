@@ -1,0 +1,76 @@
+{
+    "leftMenu":{
+        "Dashboard":"Instrumentbräda",
+        "Home":"Hem",
+        "All Users":"användare",
+        "Order":"Beställa",
+        "Show All Order":"Visa alla beställning ",
+        "Show Cancelled Order":"Visa annullerade beställningar",
+        "All Workers":"Alla Arbetare",
+        "Chat":"Chatt",
+        "Categories":"kategorier",
+        "All Categories":"Alla kategorier",
+        "Services":"Tjänster",
+        "All Services":"Alla tjänster",
+        "Sub Services":"Undertjänster"
+
+
+    },
+    "AllWorkers":{
+        "Home":"Hem",
+        "Chat":"Chatt",
+        "Workers":"Arbetares",
+        "Add Worker":"Lägg till arbetare",
+        "Data Worker":"Dataarbetare",
+        "Search":"Sök",
+        "No":"Nej",
+        "Name":"Namn",
+        "Email":"E-post ",
+        "address":"Adress ",
+        "Phone":"Telefon",
+        "National Id ":"Nationellt ID",
+        "Image":"Bild",
+        "Action":"Handling"
+    },
+
+    "AllCategory":{
+        "Home":"Home",
+        "Chat":"Chat",
+        "Data Category":"Datakategori",
+        "Add Category":"Lägg till Kategori",
+        "Search":"Sök",
+        "No":"Nej",
+        "Title":"Titel",
+        "Image":"Bild",
+        "Action":"Handling",
+        "View Details Category":"Visa detaljer Kategori",
+        "Delete":"Radera"
+    },
+    "AllServices":{
+        "Data Service":"Data Service",
+        "Search":"Sök",
+        "Home":"Hem",
+        "Chat":"Chatt",
+        "Add Service":"Lägg till tjänst",
+        "No":"Nej",
+        "Title":"Titel",
+        "Description":"Beskrivning",
+        "Price":"Pris",
+        "Category":"Kategori",
+        "Active":" Aktiva",
+        "Workers":"Arbetare",
+        "Images":"Bilder",
+        "Created_at":"Skapad vid",
+        "Updated_at":"Uppdaterad_kl",
+        "Action":"Handling"
+    },
+    "detailsWorkers":{
+        "EDIT PROFILE":"REDIGERA PROFIL",
+        "User Id":"Användar ID",
+        "Name":"Namn",
+        "Email":"E-post ",
+        "Phone":"Telefon",
+        "Address":"Adress",
+        "National-Id":"Nationellt ID"
+    }
+}

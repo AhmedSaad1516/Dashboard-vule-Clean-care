@@ -1,0 +1,112 @@
+<div class="wrapper">
+    <div id="pre-loader"  *ngIf="img">
+      <img src="../../assets//loader-01.svg" alt="">
+  
+  </div>
+      <div class="container-fluid">
+          <div class="row">
+            <div class="content-wrapper">
+              <div class="page-title">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h2 class="mb-0" style="font-size: 1.571rem;
+                      font-weight: 800;">Terms And Conditions</h2>
+                      
+                  </div>
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
+                      <li class="breadcrumb-item"><a routerLink="/home" class="default-color">{{'AllWorkers.Home' | translate}}</a></li>
+                      <li class="breadcrumb-item active"><a routerLink="/chat" class="default-color">{{'AllWorkers.Chat' | translate}}</a></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="row">  
+                
+                  <div class="col-xl-12 mb-30">     
+                    <div class="card card-statistics h-100"> 
+                      <div class="card-body">
+                       <div class="d-block d-md-flex justify-content-between">
+                          <div class="d-block">
+                            <!-- <h5 class="card-title pb-0 border-0">{{'AllWorkers.Data Worker' | translate}}</h5> -->
+                          </div>
+                          <div class="d-block d-md-flex clearfix sm-mt-20">
+                            <a class="button button-border icon small" (click)="openForm()"  style="
+                            margin-right: 13px;
+                            border-radius: 38px;
+                        "> Add Terms And Conditions<i class="fa fa-long-arrow-right"></i> </a>
+                             <div class="widget-search ml-0 clearfix">
+                              <i class="fa fa-search"></i>
+                              <input type="search"  class="form-control" placeholder="{{'AllWorkers.Search' | translate}}...."  >
+                            </div>
+                           </div>
+                         </div>
+                         <div class="table-responsive mt-15">
+                          <table class="table center-aligned-table mb-0  ">
+                            <thead>
+                              <tr style="border-top: 1px solid #dee2e6;">
+                                <th> {{'AllWorkers.No' | translate}}</th>
+                                <th> Title</th>
+                                <th> Content</th>
+                                <th>Created At</th>
+                                <th>Updated At</th>
+                               
+                                <th style="text-align: center;">{{'AllWorkers.Action' | translate}}</th>
+                            
+                              </tr>
+                            </thead>
+                            <tbody >
+                              
+                              <tr *ngFor="let itme of show">
+                            
+                                <td>{{itme.content}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                  <a class="pr-2"  > <i class="fa fa-pencil"  ></i></a>
+                                </td>
+                                <td>
+                               
+                                  <a (click)="openDelet(itme.id)" class="my btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal" > <i class="fa fa-trash-o text-danger"></i></a>
+                                  <div *ngIf="showFormDelete" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h2 class="modal-title" style="border-bottom: 2px outset red;">warning</h2>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="alert alert-danger" role="alert" style="text-align: center">
+                                            Are You Sure That You Want To Discard Your Changes ?
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-primary"  data-dismiss="modal" (click)="close()">Close</button>
+                                          <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="delete(itme.id)" >Delete</button>
+                                        </div>
+                                      </div>
+                                    </div> 
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+  
+                    
+                        </div>
+                        </div>
+                      </div>
+                    </div>   
+                  </div>
+              </div>
+          </div>
+         </div>
+      </div>
+  
+  
+  
+  

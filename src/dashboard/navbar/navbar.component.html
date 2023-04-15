@@ -1,0 +1,321 @@
+
+<div class="wrapper">
+
+
+  
+  
+
+   
+  <nav class="admin-header navbar navbar-default col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+
+    <div class="text-left navbar-brand-wrapper">
+      <a class="navbar-brand brand-logo" ><img src="../../assets/images/152 - 38 Valu Clean Care Site Logo 02.png" alt=""></a>
+      <a class="navbar-brand brand-logo-mini" ><img src="" alt=""></a>
+    </div>
+
+    <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item">
+        <a  id="button-toggle" class="button-toggle-nav inline-block ml-20 pull-left" href="javascript:void(0);"><i class="zmdi zmdi-menu ti-align-right"></i></a>
+
+      </li>
+      <li class="nav-item">
+        <div class="search">
+          <a class="search-btn not_click" ></a>
+          <div class="search-box not-click">
+            <input type="text" class="not-click form-control" placeholder="Search" value="" name="search">
+            <button class="search-button" type="submit"> <i class="fa fa-search not-click"></i></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item fullscreen">
+         
+            <div class="language" role="radiogroup" aria-labelledby="language-switcher1">
+              <p class="hidden" id="language-switcher1">Choose a language for this website</p>
+              <div class="language__container--left language__container--fr">
+                <input class="language__control" type="radio" id="language1-1" name="language-switch1">
+                <label (click)="changelan()"  class="language__label" for="language1-1">
+                  <span class="hidden"> {{lang == 'en' ? 'Swedish' : "English"}}</span>
+                </label>
+              </div>
+              <div class="language__container--right language__container--en">
+                <input class="language__control" type="radio" id="language1-2" name="language-switch1">
+                <label (click)="changelann()"  class="language__label" for="language1-2">
+                  <span class="hidden"> {{lang == 'en' ? 'Swedish' : "English"}}</span>
+                </label>
+              </div>
+            </div>
+     
+            
+     
+
+    </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link top-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <i class="ti-bell"></i>
+          <span class="badge badge-danger notification-status"> </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
+          <div class="dropdown-header notifications">
+            <strong>Notifications</strong>
+            <span  class="badge badge-pill badge-warning"></span>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a *ngFor="let item of notifyarray" class="dropdown-item">{{item}} <small class="float-right text-muted time">Just now</small> </a>
+          
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link top-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"> <i class=" ti-view-grid"></i> </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-big">
+          <div class="dropdown-header">
+            <strong>Quick Links</strong>
+          </div>
+          <div class="dropdown-divider"></div> 
+          <div class="nav-grid">
+            <a  class="nav-grid-item"><i class="ti-files text-primary"></i><h5>New Task</h5></a>
+            <a routerLinkActive="router-link-active"  class="nav-grid-item"><i class="ti-check-box text-success"></i><h5>Assign Task</h5></a>
+          </div>
+          <div class="nav-grid">
+            <a class="nav-grid-item"><i class="ti-pencil-alt text-warning"></i><h5>Add Orders</h5></a>
+            <a  class="nav-grid-item"><i class="ti-truck text-danger "></i><h5>New Orders</h5></a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown mr-30">
+        <a class="nav-link nav-pill user-avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <img [src]="admin.photo" alt="avatar">
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <div class="dropdown-header">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="mt-0 mb-0">{{admin.name}}</h5>
+                <h5 class="mt-0 mb-0">{{admin.email}}</h5>
+
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><i class="text-secondary ti-reload"></i>Activity</a>
+          <a class="dropdown-item" href="#"><i class="text-success ti-email"></i>Messages</a>
+          <a class="dropdown-item" routerLink="/profile"><i class="text-warning ti-user"></i>Profile</a>
+          <a class="dropdown-item" href="#"><i class="text-dark ti-layers-alt"></i>Projects <span class="badge badge-info">6</span> </a>
+          <div class="dropdown-divider" style="text-align: center;"></div>
+          <a class="dropdown-item" href="#"><i class="text-info ti-settings"></i>Settings</a>
+          <div class="language" role="radiogroup" aria-labelledby="language-switcher1">
+            <p class="hidden" id="language-switcher1">Choose a language for this website</p>
+            <div class="language__container--left language__container--fr">
+              <input class="language__control" type="radio" id="language1-1" name="language-switch1">
+              <label (click)="changelan()" class="language__label" for="language1-1">
+                <span class="hidden"> {{lang == 'en' ? 'Swedish' : "English"}}</span>
+              </label>
+            </div>
+            <div class="language__container--right language__container--en">
+              <input class="language__control" type="radio" id="language1-2" name="language-switch1">
+              <label (click)="changelann()"  class="language__label" for="language1-2">
+                <span class="hidden"> {{lang == 'en' ? 'Swedish' : "English"}}</span>
+              </label>
+            </div>
+          </div>
+          <a class="dropdown-item" (click)="logoutt()" style="cursor: pointer;"><i class="text-danger ti-unlock"></i>Logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+     
+      <div class="side-menu-fixed light-side-menu">
+        <div class="scrollbar side-menu-bg" tabindex="1" style="overflow-y: overlay;outline: none;">
+
+        <ul class="nav navbar-nav side-menu" id="sidebarnav">
+ 
+          <li class="active" (click)="open()"  >
+            <a  data-toggle="collapse" data-target="#dashboard">
+              <div class="pull-left" style="cursor: pointer;"><i class="ti-home"></i><span class="right-nav-text">{{'leftMenu.Dashboard' | translate}}</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
+            </a>
+            <ul *ngIf="ul"  (click)="open()"  id="dashboard" class="collapse" data-parent="#sidebarnav">
+              <li class="active"> <a (click)="closeee()"  routerLink="/home"> {{'leftMenu.Home' | translate}}</a> </li>
+           
+      
+            </ul>
+          </li>
+     
+           <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title"> </li>
+       
+          <li (click)="open()"  >
+            <a  data-toggle="collapse" data-target="#elements">
+              <div class="pull-left" style="cursor: pointer;" routerLink="/users"><i class="ti-user"></i><span class="right-nav-text">{{'leftMenu.All Users' | translate}}</span></div>
+              <div class="pull-right"></div><div class="clearfix"></div>
+            </a>
+       
+          </li>
+    
+          <li (click)="open()"  >
+            <a  data-toggle="collapse" data-target="#calendar-menu">
+              <div class="pull-left" style="cursor: pointer;"><i class="ti-car"></i><span class="right-nav-text">{{'leftMenu.Order' | translate}}</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
+            </a>
+            <ul *ngIf="ul"  (click)="open()"  id="calendar-menu" class="collapse" data-parent="#sidebarnav">
+              <li> <a (click)="closeee()"  routerLink="/order">{{'leftMenu.Show All Order' | translate}} </a> </li>
+              <li> <a (click)="closeee()"  routerLink="/cansledorder">{{'leftMenu.Show Cancelled Order' | translate}}</a> </li>
+            </ul>
+          </li>
+    
+          <li (click)="open()"  >
+            <a routerLink="/workers"><i class="ti-menu-alt"></i><span class="right-nav-text">{{'leftMenu.All Workers' | translate}}</span> </a>
+          </li>
+     
+           <li (click)="open()"  > 
+             <a routerLink="/chat"><i class="ti-comments"></i><span class="right-nav-text">{{'leftMenu.Chat' | translate}} </span></a>  
+           </li>
+             
+         
+           <li (click)="open()"  >
+            <a  data-toggle="collapse" data-target="#font-icon">
+              <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text"> {{'leftMenu.Categories' | translate}}</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
+            </a>
+            <ul *ngIf="ul"  (click)="open()"  id="font-icon" class="collapse" data-parent="#sidebarnav">
+              <li> <a (click)="closeee()"  routerLink="/category">{{'leftMenu.All Categories' | translate}}</a> </li>
+          
+            </ul>
+          </li>
+   
+            <li (click)="open()"  >
+            <a  data-toggle="collapse" data-target="#chart" style="cursor: pointer;">
+              <div class="pull-left"><i class="ti-view-grid"></i><span class="right-nav-text">{{'leftMenu.Services' | translate}}</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
+            </a>
+            <ul *ngIf="ul"  (click)="open()"  id="chart" class="collapse" data-parent="#sidebarnav">
+              <li> <a (click)="closeee()"  routerLink="/service">{{'leftMenu.All Services' | translate}}</a> </li>
+              <li> <a (click)="closeee()"  routerLink="/subService" routerLinkActive="router-link-active" >{{'leftMenu.Sub Services' | translate}} </a> </li>
+             
+            </ul>
+          </li>
+          <li (click)="open()"  >
+            <a data-toggle="collapse" data-target="#authentication" aria-expanded="false" class="collapsed">
+                <div class="pull-left"><i class="ti-id-badge"></i><span class="right-nav-text">Company</span></div>
+                <div class="pull-right"><i class="ti-plus"></i></div>
+                <div class="clearfix"></div>
+            </a>
+            <ul id="authentication" class="collapse" data-parent="#sidebarnav" style="">
+                <li> <a (click)="closeee()"  routerLink="/showCompany">Show All Company</a> </li>
+            </ul>
+        </li>
+          <li (click)="open()"  >
+            <a  data-toggle="collapse" data-target="#custom-page" aria-expanded="false" class="collapsed">
+              <div class="pull-left"><i class="ti-file"></i><span class="right-nav-text">Footer</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
+            </a>
+            <ul *ngIf="ul"  (click)="open()"  id="custom-page" class="collapse" data-parent="#sidebarnav" style="">
+              <li> <a (click)="closeee()"  routerLink="/footer">Add Data</a> </li>
+              <li> <a (click)="closeee()" >Projects summary</a> </li>
+              <li> <a (click)="closeee()" >profile</a> </li>
+          
+            </ul>
+          </li>
+          <li (click)="open()"  >
+            <a  data-toggle="collapse" data-target="#table">
+                <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">About</span></div>
+                <div class="pull-right"><i class="ti-plus"></i></div>
+                <div class="clearfix"></div>
+            </a>
+            <ul *ngIf="ul"  (click)="open()"  id="table" class="collapse" data-parent="#sidebarnav">
+                <li> <a (click)="closeee()"  routerLink="/createabout">create Data About</a> </li>
+                <li> <a (click)="closeee()"  routerLink="/showabout">showAbout</a> </li> 
+               
+            </ul>
+        </li>
+        <li  (click)="open()"  >
+          <a data-toggle="collapse" data-target="#tablerr">
+              <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">Employees</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div>
+              <div class="clearfix"></div>
+          </a>
+          <ul *ngIf="ul"  (click)="open()"  id="tablerr" class="collapse" data-parent="#sidebarnav">
+              <li> <a routerLink="/addemployee" (click)="closeee()" >Add Employee</a> </li> 
+              <li> <a (click)="closeee()"  routerLink="/employee">Show Employee</a> </li>
+          </ul>
+        </li>
+        <li  (click)="open()"  >
+          <a data-toggle="collapse" data-target="#tablerrr">
+              <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">Role</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div>
+              <div class="clearfix"></div>
+          </a>
+          <ul *ngIf="ul"  (click)="open()"  id="tablerrr" class="collapse" data-parent="#sidebarnav">
+              <li> <a (click)="closeee()"  routerLink="/role">Add Role</a> </li>
+              
+             
+          </ul>
+        </li>
+        <li  (click)="open()"  >
+          <a data-toggle="collapse" data-target="#tablerrrr">
+              <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">Announcement</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div>
+              <div class="clearfix"></div>
+          </a>
+          <ul *ngIf="ul"  (click)="open()"  id="tablerrrr" class="collapse" data-parent="#sidebarnav">
+              <!-- <li> <a (click)="closeee()"  routerLink="/addannouncement">Add Announcement</a> </li> -->
+              
+              <li> <a (click)="closeee()"  routerLink="/showannouncement">show Announcement</a> </li>
+
+          </ul>
+        </li>
+
+        <li  (click)="open()"  >
+          <a data-toggle="collapse" data-target="#tablerrrrr">
+              <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">Type Expenses</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div>
+              <div class="clearfix"></div>
+          </a>
+          <ul *ngIf="ul"  (click)="open()"  id="tablerrrrr" class="collapse" data-parent="#sidebarnav">
+              <!-- <li> <a (click)="closeee()"  routerLink="/addannouncement">Add Announcement</a> </li> -->
+              
+              <li> <a (click)="closeee()"  routerLink="/showexpenses">Show Expenses</a> </li>
+
+          </ul>
+        </li>
+        <li  (click)="open()"  >
+          <a data-toggle="collapse" data-target="#tablerrrrrr">
+              <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">Expenses</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div>
+              <div class="clearfix"></div>
+          </a>
+          <ul *ngIf="ul"  (click)="open()"  id="tablerrrrrr" class="collapse" data-parent="#sidebarnav">
+              <!-- <li> <a (click)="closeee()"  routerLink="/addannouncement">Add Announcement</a> </li> -->
+              
+              <li> <a (click)="closeee()"  routerLink="/expenses">Show Expenses</a> </li>
+
+          </ul>
+        </li>
+        <li  (click)="open()"  >
+          <a data-toggle="collapse" data-target="#tablerrrrrrr">
+              <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">terms and conditions</span></div>
+              <div class="pull-right"><i class="ti-plus"></i></div>
+              <div class="clearfix"></div>
+          </a>
+          <ul *ngIf="ul"  (click)="open()"  id="tablerrrrrrr" class="collapse" data-parent="#sidebarnav">
+              <!-- <li> <a (click)="closeee()"  routerLink="/addannouncement">Add Announcement</a> </li> -->
+              
+              <li> <a (click)="closeee()"  routerLink="/terms and conditions">Show terms and conditions</a> </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div> 
+    <div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 5px; z-index: 9; cursor: default; position: absolute; top: 0px; left: 225px; height: 228px; opacity: 0; display: block;"><div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 5px; height: 62px; background-color: rgba(0, 0, 0, 0.1); border: 0px; background-clip: padding-box; border-radius: 0px;"></div></div>
+
+    </div>
+  </div>
+   </div>
+
+
+   
+   
+  <router-outlet></router-outlet>

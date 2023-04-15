@@ -1,0 +1,107 @@
+<div class="wrapper">
+    <div id="pre-loader"  *ngIf="img">
+      <img src="../../assets//loader-01.svg" alt="">
+  
+  </div>
+      <div class="container-fluid">
+          <div class="row">
+            <div class="content-wrapper">
+              <div class="page-title">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h2 class="mb-0" style="font-size: 1.571rem;
+                      font-weight: 800;"> Add</h2>
+                      
+                  </div>
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
+                      <li class="breadcrumb-item"><a routerLink="/home" class="default-color">{{'AllWorkers.Home' | translate}}</a></li>
+                      <li class="breadcrumb-item active"><a routerLink="/chat" class="default-color">{{'AllWorkers.Chat' | translate}}</a></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="row">  
+                
+                <div class="col-xl-6 mb-30">     
+                    <div class="card card-statistics h-100"> 
+                      <div class="card-body">
+                       <h5 class="card-title">Footer Data</h5>
+                         <div class="repeater-file">
+                            <div data-repeater-list="group-a">
+                               <form [formGroup]="footerForm">
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputEmail4">Email</label>
+                                      <input formControlName="email" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="inputPassword4">Title</label>
+                                      <input formControlName="title" type="text" class="form-control" id="inputPassword4" placeholder="Title">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputAddress4">Address</label>
+                                    <input formControlName="address" type="text" class="form-control" id="inputAddress4" placeholder="Address">
+                                  </div>
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputCity4">Phone</label>
+                                      <input formControlName="phone" type="text" class="form-control" id="inputCity4" placeholder="Phone">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip4">Content</label>
+                                      <input formControlName="content" type="text" class="form-control" id="inputZip4" placeholder="Content">
+                                    </div>
+                                  </div>
+                             
+                              </form>
+                           </div>  
+                         <div class="clearfix">
+                              <input (click)="submit()" [disabled]="footerForm.invalid" class="button" data-repeater-create="" type="button" value="Add ">
+                          </div> 
+                      </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 mb-30">     
+                    <div class="card card-statistics h-100"> 
+                      <div class="card-body">
+                       <h5 class="card-title">social media</h5>
+                         <div class="repeater-file">
+                            <div data-repeater-list="group-a">
+                               <form [formGroup]="footerForm">
+                                  <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                      <label for="inputEmail4">Facebook</label>
+                                      <input formControlName="facebook_url" type="text" class="form-control" id="inputEmail4" placeholder="Facebook">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                      <label for="inputPassword4">Tiktok</label>
+                                      <input  formControlName="tiktok_url" type="text" class="form-control" id="inputPassword4" placeholder="Tiktok">
+                                    </div>
+                                  </div>
+                                  <div class="form-group ">
+                                    <label for="inputAddress4">Twitter</label>
+                                    <input formControlName="twitter_url" type="text" class="form-control" id="inputAddress4" placeholder="Twitter">
+                                  </div>
+                                  
+                                    <div class="form-group ">
+                                      <label for="inputCity4">Instagram</label>
+                                      <input formControlName="instagram_url" type="text" class="form-control" id="inputCity4" placeholder="Instagram">
+                                    
+                                  </div>
+                              </form>
+                           </div>  
+                         <div class="clearfix">
+                              <input (click)="submit()" class="button" data-repeater-create="" type="button" value="Add ">
+                          </div> 
+                      </div>
+                     </div>
+                  </div>
+                </div>
+                  </div>
+              </div>
+          </div>
+         </div>
+      </div>

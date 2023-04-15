@@ -1,0 +1,14 @@
+.my:hover{
+    background: none  !important;
+}
+.my{
+    border: none;
+    font-size: 10px;
+}
+
+th{
+    text-align: center;
+}
+td{
+    text-align: center;
+}

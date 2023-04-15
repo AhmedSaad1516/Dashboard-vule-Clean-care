@@ -1,0 +1,77 @@
+{
+    "leftMenu":{
+        "Dashboard":"Dashboard",
+        "Home":"Home",
+        "All Users":"All Users",
+        "Order":"Order",
+        "Show All Order":"Show All Order",
+        "Show Cancelled Order":"Show Cansled Order",
+        "All Workers":"All Workers",
+        "Chat":"Chat",
+        "Categories":"Categories",
+        "All Categories":"All Categories",
+        "Services":"Services",
+        "All Services":"All Services",
+        "Sub Services":"Sub Services"
+    },
+
+    "AllWorkers":{
+        "Home":"Home",
+        "Chat":"Chat",
+        "Workers":"Workers",
+        "Add Worker":"Add Worker",
+        "Data Worker":"Data Worker",
+        "Search":"Search",
+        "No":"No",
+        "Name":"Name",
+        "Email":"Email",
+        "Address":"Address",
+        "Phone":"Phone",
+        "National Id":"National Id",
+        "Image":"Image",
+        "Action":"Action"
+    },
+
+
+    "AllCategory":{
+        "Home":"Home",
+        "Chat":"Chat",
+        "Data Category":"Data Category",
+        "Add Category":"Add Category",
+        "Search":"Search",
+        "No":"No",
+        "Title":"Title",
+        "Image":"Image",
+        "Action":"Action",
+        "View Details Category":"View Details Category",
+        "Delete":"Delete"
+    },
+    "AllServices":{
+        "Data Service":"Data Service",
+        "Search":"Search",
+        "Home":"Home",
+        "Chat":"Chat",
+        "Add Service":"Add Service",
+        "No":"No",
+        "Title":"Title",
+        "Description":"Description",
+        "Price":"Price",
+        "Category":"Category",
+        "Active":"Active",
+        "Workers":"Workers",
+        "Images":"Images",
+        "Created_at":"Created_at",
+        "Updated_at":"Updated_at",
+        "Action":"Action"
+    },
+
+    "detailsWorkers":{
+        "EDIT PROFILE":"EDIT PROFILE",
+        "User Id":"User Id",
+        "Name":"Name",
+        "Email":"Email",
+        "Phone":"Phone",
+        "Address":"Address",
+        "National-Id":"Nationellt ID "
+    }
+}

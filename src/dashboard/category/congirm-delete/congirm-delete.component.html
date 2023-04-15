@@ -1,0 +1,27 @@
+<div id="pre-loader"  *ngIf="false">
+    <img src="../../assets//loader-01.svg" alt="">
+
+</div>
+<div class="modal show" tabindex="-1" role="dialog" id="add-category" style="display: block; padding-right: 17px; margin-top: 250px;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" style="border-bottom: 2px outset red;">warning</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body p-20">
+                <form>
+                    <div class="row">
+                        <div class="alert alert-danger" role="alert" style="text-align: center;margin-left: 60px;">
+                          Are You Sure That You Want To Discard Your Changes ?
+                          </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button  mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="confirm()" >Yes</button>
+                <button mat-flat-button  class="btn btn-danger py-1 px-5" (Click)="close()">No</button>
+            </div>
+        </div>
+    </div>
+</div> 

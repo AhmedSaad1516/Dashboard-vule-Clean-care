@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <div id="pre-loader"  *ngIf="img">
+      <img src="../../assets//loader-01.svg" alt="">
+  
+    </div>
+ 
+      <div class="p-4" style="margin-top: 46px">
+          <header class="d-flex justify-content-between align-items-center" >
+              
+              <h1  class="m-0">Add Terms And Conditions</h1> <hr>
+              <!-- <h1  *ngIf="data" class="m-0">Update Type Expenses</h1> <hr> -->
+
+      
+          
+            </header>
+                            <form class="animate__animated  animate__fadeInDown" [formGroup]="notesForm" style="    
+                            margin-top: 46px">
+                                <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <!-- <div  class="alert alert-danger" role="alert">
+                                               Data Is Not Falid
+                                              </div> -->
+                                            <mat-form-field appearance="outline" class="w-100">
+                                                <mat-label>Title</mat-label>
+                                                <input matInput formControlName="title" placeholder="Add Title">
+                                            </mat-form-field>
+                                        </div>  
+                                        <div class="col-md-12">
+                                            <!-- <div  class="alert alert-danger" role="alert">
+                                               Data Is Not Falid
+                                              </div> -->
+                                            <mat-form-field appearance="outline" class="w-100">
+                                                <mat-label>Content</mat-label>
+                                                 <input matInput formControlName="content" placeholder="Add Content">
+                                            </mat-form-field>
+                                        </div>  
+
+                                </div>
+                            </form>
+                        
+                            <footer class="tw-p-6">
+                                <div >
+                                    <button  style="margin-top: 5px;"  mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="createNotes()" >Create</button>
+                                    <!-- <button *ngIf="data"  style="margin-top: 5px;"  mat-flat-button class="btn btn-success py-1 px-5 mx-2" (click)="update()" >Update</button> -->
+
+                                    <button mat-flat-button  class="btn btn-danger py-1 px-5">Close</button>
+
+                                  </div>
+                                
+                              </footer>
+                        </div>
+                        </div>
+                
+  
+
+
